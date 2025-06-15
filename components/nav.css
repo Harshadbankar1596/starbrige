@@ -13,6 +13,7 @@
     background-color: black;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .logosectio{
     color: white;
