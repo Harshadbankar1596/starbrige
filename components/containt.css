@@ -1,6 +1,7 @@
 .containtbox {
     position: relative;
-    height: 35em;
+    height: 40em;
+    overflow: auto;
     width: 100%;
     overflow: hidden;
     background-color: black;
@@ -26,7 +27,7 @@
 }
 
 .paragraf {
-    width: 70%;
+    width: 80%;
     margin: auto;
     color: white;
     text-align: center;
