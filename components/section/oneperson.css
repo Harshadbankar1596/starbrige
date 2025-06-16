@@ -1,0 +1,98 @@
+.person-detail-container {
+  width: 100%;
+  padding: 60px;
+  background: linear-gradient(to right, #fffefc, #f9f9f9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.person-card {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 60vh;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e2e2;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.person-card:hover {
+  transform: scale(1.02);
+  border-color: #ffc107;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.image-section {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-section {
+  flex: 2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.person-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffc107;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.person-followers,
+.person-profession,
+.person-experience,
+.person-languages,
+.person-specialization {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.person-followers strong,
+.person-profession strong,
+.person-experience strong,
+.person-languages strong,
+.person-specialization strong {
+  color: #111;
+  margin-right: 6px;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  color: red;
+}

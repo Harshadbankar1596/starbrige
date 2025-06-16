@@ -9,6 +9,7 @@ import Servis from "../components/servis";
 import Footer from "../components/footer";
 import About from '../components/about';
 import Actors from "../components/section/actor"
+import Oneperson from '../components/section/oneperson';
 
 const Home = () => {
   return (
@@ -28,6 +29,11 @@ const App = () => {
         <Route path="*" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/actors" element={<Actors obj={"actors"} />} />
+        <Route path="/anchors" element={<Actors obj={"anchors"} />} />
+        <Route path="/influencers" element={<Actors obj={"influencers"} />} />
+        <Route path="/mehandi artist" element={<Actors obj={"mehandiartist"} />} />
+        <Route path="/makeup artist" element={<Actors obj={"makeup artist"} />} />
+        <Route path="/:type/:name" element={<Oneperson />} />
       </Routes>
       <Footer />
     </BrowserRouter>
