@@ -56,7 +56,7 @@ export const anchors = [
     {
         name: "Pooja Khambalkar",
         follwers: "50.5k",
-        img: "/public/photos/PoojaKhambalkar.jpg",
+        img: "/public/photos/Pooja Khambalkar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -75,7 +75,7 @@ export const anchors = [
     {
         name: "Vidula Baviskar",
         follwers: "8k",
-        img: "/public/photos/Vidula Baviskar.jpg",
+        img: "/photos/Vidula Baviskar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
