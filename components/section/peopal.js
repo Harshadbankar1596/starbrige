@@ -36,7 +36,7 @@ export const anchors = [
     {
         name: "anchor Kalyani Sawale",
         follwers: "1.2k",
-        img: "/photos/klyanisawle.jpg",
+        img: "/starbrige/photos/klyanisawle.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -56,7 +56,7 @@ export const anchors = [
     {
         name: "Pooja Khambalkar",
         follwers: "50.5k",
-        img: "/photos/PoojaKhambalkar.jpg",
+        img: "/public/photos/PoojaKhambalkar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -75,7 +75,7 @@ export const anchors = [
     {
         name: "Vidula Baviskar",
         follwers: "8k",
-        img: "/photos/Vidulabaviskar.jpg",
+        img: "/public/photos/Vidula Baviskar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
