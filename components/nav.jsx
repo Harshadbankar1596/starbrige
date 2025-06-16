@@ -1,21 +1,27 @@
-import React from 'react'
-import "./nav.css"
-const nav = () => {
+import React from 'react';
+import './nav.css';
+import { Link } from 'react-router-dom';  // ✅ सही import
+
+const Nav = () => {
   return (
-    <div className='nav'>
+    <div className="nav">
       <div className="logosectio">
         <p id="logoname">StarBridge India</p>
       </div>
+
       <div className="homes">
-        <a href="" id="homes">home</a>
-        <a href="" id="homes">about</a>
-        <a href="" id="homes">contact</a>
+        <Link to="/" id="homes">Home</Link>
+        <Link to="/about" id="homes">About</Link>
+        <Link to="/contact" id="homes">Contact</Link>
       </div>
+
       <div className="login">
-        <button className='btn'>login</button>
+        <button className="btn">Login</button>
       </div>
-      <div className="menu">| | |</div>
+
+      <div className="menu">|||</div>
     </div>
-  )
-}
-export default nav
+  );
+};
+
+export default Nav;
