@@ -1,35 +1,33 @@
+/* Main container */
 .person-detail-container {
-  width: 100%;
-  padding: 60px;
-  background: linear-gradient(to right, #fffefc, #f9f9f9);
+  width: 97%;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
+/* Card */
 .person-card {
   display: flex;
-  width: 100%;
-  max-width: 1200px;
-  height: 60vh;
-  background-color: #ffffff;
+  flex-direction: row;
+  background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border: 2px solid #e2e2e2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.4s ease;
+  max-width: 1100px;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
 }
 
-.person-card:hover {
-  transform: scale(1.02);
-  border-color: #ffc107;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
-
+/* Image */
 .image-section {
   flex: 1;
-  height: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  height: auto;
   overflow: hidden;
 }
 
@@ -39,60 +37,124 @@
   object-fit: cover;
 }
 
+/* Info section */
 .info-section {
   flex: 2;
   padding: 40px;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #fff;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 .person-name {
-  font-size: 32px;
-  font-weight: 700;
-  color: #212529;
+  font-size: 36px;
+  font-weight: 800;
   margin-bottom: 20px;
+  color: #333;
   border-bottom: 2px solid #ffc107;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
 }
 
-.person-followers,
-.person-profession,
-.person-experience,
-.person-languages,
-.person-specialization {
+.info-section p {
   font-size: 18px;
-  margin-bottom: 12px;
   color: #555;
+  margin-bottom: 12px;
 }
 
-.person-followers strong,
-.person-profession strong,
-.person-experience strong,
-.person-languages strong,
-.person-specialization strong {
-  color: #111;
-  margin-right: 6px;
+.info-section p strong {
+  font-weight: 700;
+  color: #222;
 }
 
-.animate-slide-in {
-  animation: slideIn 0.6s ease-out forwards;
-  opacity: 0;
-  transform: translateY(20px);
+/* Book Me Button */
+.book-btn {
+  margin-top: 30px;
+  align-self: flex-start;
+  padding: 12px 28px;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-@keyframes slideIn {
+.book-btn:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+}
+
+/* Not found */
+.not-found {
+  text-align: center;
+  font-size: 24px;
+  color: red;
+  margin-top: 80px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.not-found {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 24px;
-  color: red;
+/* 💻 Tablet */
+@media screen and (max-width: 1024px) {
+  .info-section {
+    padding: 30px;
+  }
+
+  .person-name {
+    font-size: 30px;
+  }
+
+  .info-section p {
+    font-size: 16px;
+  }
+}
+
+/* 📱 Mobile */
+@media screen and (max-width: 768px) {
+  .person-card {
+    flex-direction: column;
+  }
+
+  .image-section {
+    width: 100%;
+    max-height: 320px;
+  }
+
+  .image-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .info-section {
+    padding: 20px;
+  }
+
+  .person-name {
+    font-size: 26px;
+  }
+
+  .info-section p {
+    font-size: 15px;
+  }
+
+  .book-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -16,7 +16,7 @@ export const anchors = [
     {
         name: "Namrata Shirsath",
         follwers: "10.6k",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsZrjuHBtsFFkq8l58P7XVoGFw5KvRxjyFNg&s",
+        img:"../../public/photos/namratashirsath.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -26,7 +26,7 @@ export const anchors = [
     {
         name: "Neha patil",
         follwers: "12k",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNOFeJr6A1v6tgJ23W8RFYhDSTwDO_SPIyMQ&s",
+        img: "../../public/photos/nehapatil.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -36,7 +36,7 @@ export const anchors = [
     {
         name: "anchor Kalyani Sawale",
         follwers: "1.2k",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRodx6Dsni25YpB9OdKfT9-q4IY1IjzMxbLqA&s",
+        img: "../../public/photos/klyanisawle.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -46,7 +46,7 @@ export const anchors = [
     {
         name: "Nisha Kuchekar",
         follwers: "7.6k",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPqWKhiMO-lB7IdsuNal8SkGUkBqetr8khR7AjNjQYVnWk5WDshBS_nvGxZdj7GcFqG2A&usqp=CAU",
+        img: "../../public/photos/nishakuchekar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -56,7 +56,7 @@ export const anchors = [
     {
         name: "Pooja Khambalkar",
         follwers: "50.5k",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQipiOZc4AdyaP6gGvz0OSBirQu39-wTLDXjcqH4vmFoS9UW0f2RJswcTDdGbFaxptrEnc&usqp=CAU",
+        img: "../../public/photos/Pooja Khambalkar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -64,18 +64,9 @@ export const anchors = [
             "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
     },
     {
-        name: "Shradha Kulkarni",
-        follwers: "9k",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMYQBFFfIXmIaJsUM1lxeBsgPQkImyjixOJ6QeD7SQkHR6TD7AoYwp6hnWNKIDxSKFWkA&usqp=CAU",
-        profession: null,
-        experience: null,
-        languages: null,
-        specialization: null,
-    },
-    {
         name: "Snehal Nimbalkar ",
         follwers: "16.1k",
-        img: "",
+        img: "../../public/photos/snehalnimbekar.jpg",
         profession: null,
         experience: null,
         languages: null,
@@ -84,7 +75,7 @@ export const anchors = [
     {
         name: "Vidula Baviskar",
         follwers: "8k",
-        img: "https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/vidula-baviskar-2016922-16-02-2022-08-37-28.jpg",
+        img: "../../public/photos/Vidula Baviskar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -94,7 +85,7 @@ export const anchors = [
     {
         name: "Shradha Deochakke",
         follwers: "1.2k",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvx_mbQC2hVdVd4XEtTaytWZM1pu6mTOCDQ&s",
+        img: "../../public/photos/Shradha.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -149,11 +140,7 @@ export const influencers = [
         follwers: "8k",
         img: "https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/vidula-baviskar-2016922-16-02-2022-08-37-28.jpg"
     },
-    {
-        name: "Shradha Kulkarni",
-        follwers: "9k",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMYQBFFfIXmIaJsUM1lxeBsgPQkImyjixOJ6QeD7SQkHR6TD7AoYwp6hnWNKIDxSKFWkA&usqp=CAU"
-    },
+
 ]
 
 

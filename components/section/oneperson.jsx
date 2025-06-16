@@ -1,9 +1,17 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { actors, anchors, influencers } from './peopal';
 import './oneperson.css';
 
 const Oneperson = () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   const { type, name } = useParams();
   const decodedName = decodeURIComponent(name).toLowerCase().trim();
 
@@ -12,13 +20,16 @@ const Oneperson = () => {
   else if (type === 'anchors') list = anchors;
   else if (type === 'influencers') list = influencers;
 
-  const person = list.find((p) => p.name.toLowerCase().trim() === decodedName);
+  const person = list.find(
+    (p) => p.name.toLowerCase().trim() === decodedName
+  );
+
   if (!person) return <h2 className="not-found">No person found</h2>;
 
   const displayValue = (value) => value || 'Not available';
 
   return (
-    <div className="person-detail-container">
+    <div ref={scrollRef} className="person-detail-container">
       <div className="person-card animate-slide-in">
         <div className="image-section">
           <img
@@ -43,6 +54,11 @@ const Oneperson = () => {
           <p className="person-specialization">
             <strong>Specialization:</strong> {displayValue(person.specialization)}
           </p>
+
+          {/* Book Me Button */}
+          <Link to={`/book?name=${encodeURIComponent(person.name)}`} className="book-btn">
+            Book Me
+          </Link>
         </div>
       </div>
     </div>
