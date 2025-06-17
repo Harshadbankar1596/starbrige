@@ -10,6 +10,7 @@ import Footer from "../components/footer";
 import About from '../components/about';
 import Actors from "../components/section/actor"
 import Oneperson from '../components/section/oneperson';
+import Form from "../components/form"
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="*" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/actors" element={<Actors obj={"actors"} />} />
         <Route path="/anchors" element={<Actors obj={"anchors"} />} />
@@ -34,6 +36,7 @@ const App = () => {
         <Route path="/mehandi artist" element={<Actors obj={"mehandiartist"} />} />
         <Route path="/makeup artist" element={<Actors obj={"makeup artist"} />} />
         <Route path="/:type/:name" element={<Oneperson />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
       <Footer />
     </BrowserRouter>

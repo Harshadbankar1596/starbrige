@@ -56,7 +56,7 @@ const Oneperson = () => {
           </p>
 
           {/* Book Me Button */}
-          <Link to={`/book?name=${encodeURIComponent(person.name)}`} className="book-btn">
+          <Link to={"/form"} className="book-btn">
             Book Me
           </Link>
         </div>
