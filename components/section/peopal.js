@@ -16,7 +16,7 @@ export const anchors = [
     {
         name: "Namrata Shirsath",
         follwers: "10.6k",
-        img: "starbrige/namratashirsath.jpg",
+        img: "https://i.ibb.co/zhW4tCsN/namratashirsath.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -26,7 +26,7 @@ export const anchors = [
     {
         name: "Neha patil",
         follwers: "12k",
-        img: "starbrige/public/nehapatil.jpg",
+        img: "https://i.ibb.co/dsThRpnm/nehapatil.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -36,7 +36,7 @@ export const anchors = [
     {
         name: "anchor Kalyani Sawale",
         follwers: "1.2k",
-        img: "starbrige/public/klyanisawle.jpg",
+        img: "https://i.ibb.co/JMLpSDg/klyanisawle.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -46,7 +46,7 @@ export const anchors = [
     {
         name: "Nisha Kuchekar",
         follwers: "7.6k",
-        img: "starbrige/public/nishakuchekar.jpg",
+        img: "https://i.ibb.co/39Pk5yy5/nishakuchekar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -56,7 +56,7 @@ export const anchors = [
     {
         name: "Pooja Khambalkar",
         follwers: "50.5k",
-        img: "starbrige/public/PoojaKhambalkar.jpg",
+        img: "https://i.ibb.co/gZ16z4rz/Pooja-Khambalkar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -66,7 +66,7 @@ export const anchors = [
     {
         name: "Snehal Nimbalkar ",
         follwers: "16.1k",
-        img: "starbrige/public/snehalnimbekar.jpg",
+        img: "https://i.ibb.co/sJDVY6c7/snehalnimbekar.jpg",
         profession: null,
         experience: null,
         languages: null,
@@ -75,7 +75,7 @@ export const anchors = [
     {
         name: "Vidula Baviskar",
         follwers: "8k",
-        img: "starbrige/public/Vidulabaviskar.jpg",
+        img: "https://i.ibb.co/rG0tmS5d/Vidulabaviskar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -85,7 +85,7 @@ export const anchors = [
     {
         name: "Shradha Deochakke",
         follwers: "1.2k",
-        img: "starbrige/public/Shradha.jpg",
+        img: "https://i.ibb.co/Xk8G80Sp/Shradha.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
