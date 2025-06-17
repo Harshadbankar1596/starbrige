@@ -12,138 +12,62 @@ export const actors =
 
 // All Ancors
 
-// export const anchors = [
-//     {
-//         name: "Namrata Shirsath",
-//         follwers: "10.6k",
-//         img: "/photos/namratashirsath.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization:
-//             "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Neha patil",
-//         follwers: "12k",
-//         img: "/photos/nehapatil.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "3 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization:
-//             "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "anchor Kalyani Sawale",
-//         follwers: "1.2k",
-//         img: "/photos/klyanisawle.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "3 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization:
-//             "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Nisha Kuchekar",
-//         follwers: "7.6k",
-//         img: "/photos/nishakuchekar.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization:
-//             "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Pooja Khambalkar",
-//         follwers: "50.5k",
-//         img: "/public/photos/PoojaKhambalkar.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization:
-//             "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Snehal Nimbalkar ",
-//         follwers: "16.1k",
-//         img: "/photos/snehalnimbekar.jpg",
-//         profession: null,
-//         experience: null,
-//         languages: null,
-//         specialization: null,
-//     },
-//     {
-//         name: "Vidula Baviskar",
-//         follwers: "8k",
-//         img: "/photos/Vidulabaviskar.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization:
-//             "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Shradha Deochakke",
-//         follwers: "1.2k",
-//         img: "/photos/Shradha.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization:
-//             "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-// ];
-
 export const anchors = [
     {
         name: "Namrata Shirsath",
         follwers: "10.6k",
-        img:"/starbrige/photos/namratashirsath.jpg",
+        img: "/photos/namratashirsath.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
-        specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+        specialization:
+            "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
     },
     {
         name: "Neha patil",
         follwers: "12k",
-        img: "/starbrige/photos/nehapatil.jpg",
+        img: "/photos/namratashirsath.jpg",
+        // img: "/photos/nehapatil.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
-        specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+        specialization:
+            "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
     },
     {
         name: "anchor Kalyani Sawale",
         follwers: "1.2k",
-        img: "/starbrige/photos/klyanisawle.jpg",
+        img: "/photos/klyanisawle.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
-        specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+        specialization:
+            "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
     },
     {
         name: "Nisha Kuchekar",
         follwers: "7.6k",
-        img: "/starbrige/photos/nishakuchekar.jpg",
+        img: "/photos/nishakuchekar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
-        specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+        specialization:
+            "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
     },
     {
         name: "Pooja Khambalkar",
         follwers: "50.5k",
-        img: "/starbrige/photos/PoojaKhambalkar.jpg",
+        img: "/public/photos/PoojaKhambalkar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
-        specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+        specialization:
+            "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
     },
     {
         name: "Snehal Nimbalkar ",
         follwers: "16.1k",
-        img: "/starbrige/photos/snehalnimbekar.jpg",
+        img: "/photos/snehalnimbekar.jpg",
         profession: null,
         experience: null,
         languages: null,
@@ -152,22 +76,99 @@ export const anchors = [
     {
         name: "Vidula Baviskar",
         follwers: "8k",
-        img: "/starbrige/photos/Vidulabaviskar.jpg",
+        img: "/photos/Vidulabaviskar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
-        specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+        specialization:
+            "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
     },
     {
         name: "Shradha Deochakke",
         follwers: "1.2k",
-        img: "/starbrige/photos/Shradha.jpg",
+        img: "/photos/Shradha.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
-        specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+        specialization:
+            "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
     },
 ];
+
+// export const anchors = [
+//     {
+//         name: "Namrata Shirsath",
+//         follwers: "10.6k",
+//         img:"/starbrige/photos/namratashirsath.jpg",
+//         profession: "Anchor | Emcee | Presenter",
+//         experience: "5 years of stage and event hosting",
+//         languages: "English | Marathi | Hindi",
+//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+//     },
+//     {
+//         name: "Neha patil",
+//         follwers: "12k",
+//         img: "/starbrige/photos/nehapatil.jpg",
+//         profession: "Anchor | Emcee | Presenter",
+//         experience: "3 years of stage and event hosting",
+//         languages: "English | Marathi | Hindi",
+//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+//     },
+//     {
+//         name: "anchor Kalyani Sawale",
+//         follwers: "1.2k",
+//         img: "/starbrige/photos/klyanisawle.jpg",
+//         profession: "Anchor | Emcee | Presenter",
+//         experience: "3 years of stage and event hosting",
+//         languages: "English | Marathi | Hindi",
+//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+//     },
+//     {
+//         name: "Nisha Kuchekar",
+//         follwers: "7.6k",
+//         img: "/starbrige/photos/nishakuchekar.jpg",
+//         profession: "Anchor | Emcee | Presenter",
+//         experience: "5 years of stage and event hosting",
+//         languages: "English | Marathi | Hindi",
+//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+//     },
+//     {
+//         name: "Pooja Khambalkar",
+//         follwers: "50.5k",
+//         img: "/starbrige/photos/PoojaKhambalkar.jpg",
+//         profession: "Anchor | Emcee | Presenter",
+//         experience: "5 years of stage and event hosting",
+//         languages: "English | Marathi | Hindi",
+//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+//     },
+//     {
+//         name: "Snehal Nimbalkar ",
+//         follwers: "16.1k",
+//         img: "/starbrige/photos/snehalnimbekar.jpg",
+//         profession: null,
+//         experience: null,
+//         languages: null,
+//         specialization: null,
+//     },
+//     {
+//         name: "Vidula Baviskar",
+//         follwers: "8k",
+//         img: "/starbrige/photos/Vidulabaviskar.jpg",
+//         profession: "Anchor | Emcee | Presenter",
+//         experience: "5 years of stage and event hosting",
+//         languages: "English | Marathi | Hindi",
+//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+//     },
+//     {
+//         name: "Shradha Deochakke",
+//         follwers: "1.2k",
+//         img: "/starbrige/photos/Shradha.jpg",
+//         profession: "Anchor | Emcee | Presenter",
+//         experience: "5 years of stage and event hosting",
+//         languages: "English | Marathi | Hindi",
+//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
+//     },
+// ];
 
 
 
