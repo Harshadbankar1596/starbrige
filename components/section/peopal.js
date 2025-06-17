@@ -16,7 +16,7 @@ export const anchors = [
     {
         name: "Namrata Shirsath",
         follwers: "10.6k",
-        img: "/photos/namratashirsath.jpg",
+        img: "/namratashirsath.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -26,8 +26,7 @@ export const anchors = [
     {
         name: "Neha patil",
         follwers: "12k",
-        img: "/photos/namratashirsath.jpg",
-        // img: "/photos/nehapatil.jpg",
+        img: "/nehapatil.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -37,7 +36,7 @@ export const anchors = [
     {
         name: "anchor Kalyani Sawale",
         follwers: "1.2k",
-        img: "/photos/klyanisawle.jpg",
+        img: "/klyanisawle.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "3 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -47,7 +46,7 @@ export const anchors = [
     {
         name: "Nisha Kuchekar",
         follwers: "7.6k",
-        img: "/photos/nishakuchekar.jpg",
+        img: "/nishakuchekar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -57,7 +56,7 @@ export const anchors = [
     {
         name: "Pooja Khambalkar",
         follwers: "50.5k",
-        img: "/public/photos/PoojaKhambalkar.jpg",
+        img: "/PoojaKhambalkar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -67,7 +66,7 @@ export const anchors = [
     {
         name: "Snehal Nimbalkar ",
         follwers: "16.1k",
-        img: "/photos/snehalnimbekar.jpg",
+        img: "/snehalnimbekar.jpg",
         profession: null,
         experience: null,
         languages: null,
@@ -76,7 +75,7 @@ export const anchors = [
     {
         name: "Vidula Baviskar",
         follwers: "8k",
-        img: "/photos/Vidulabaviskar.jpg",
+        img: "/Vidulabaviskar.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
@@ -86,7 +85,7 @@ export const anchors = [
     {
         name: "Shradha Deochakke",
         follwers: "1.2k",
-        img: "/photos/Shradha.jpg",
+        img: "/Shradha.jpg",
         profession: "Anchor | Emcee | Presenter",
         experience: "5 years of stage and event hosting",
         languages: "English | Marathi | Hindi",
