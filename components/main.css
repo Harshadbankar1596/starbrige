@@ -1,0 +1,115 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gold: #d4af37;
+  --dark-gray: #111111;
+  --light-gray: #e0e0e0;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, var(--black), #1a1a1a);
+  border-bottom: 2px solid var(--gold);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--light-gray);
+}
+
+/* Section Titles */
+.title {
+  text-align: center;
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Offer Section */
+.offer-section {
+  padding: 3rem 0;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.offer-box {
+  background-color: var(--dark-gray);
+  border: 1px solid var(--gold);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.offer-box h3 {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.offer-box p {
+  color: var(--light-gray);
+}
+
+/* Why Choose Us */
+.choose-section {
+  padding: 3rem 0;
+  background-color: #0d0d0d;
+  border-top: 2px solid var(--gold);
+}
+
+.choose-box {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.choose-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.choose-box li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.choose-box li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
