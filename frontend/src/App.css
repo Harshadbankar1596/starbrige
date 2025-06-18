@@ -1,0 +1,21 @@
+/* Default (Dark Theme) */
+:root {
+  --bg: #000000;
+  --text: #ffffff;
+  --primary: #d4af37;
+  --secondary: #1a1a1a;
+  --light: #e0e0e0;
+  --box-bg: rgba(255, 255, 255, 0.05);
+  --border-glow: 0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Light Theme */
+body.light-theme {
+  --bg: #ffffff;
+  --text: #000000;
+  --primary: #c38700;
+  --secondary: #f4f4f4;
+  --light: #555555;
+  --box-bg: rgba(0, 0, 0, 0.03);
+  --border-glow: 0 0 10px rgba(195, 135, 0, 0.3);
+}

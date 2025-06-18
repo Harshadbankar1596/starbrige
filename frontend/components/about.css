@@ -1,8 +1,16 @@
+/* Recommended to be defined in app.css or main.css */
+:root {
+  --background-dark: #0d0d0d;
+  --text-gold: #ffd700;
+  --text-white: #ffffff;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
 .about-section {
-  background-color: #0d0d0d;
-  color: #ffd700;
+  background-color: var(--background-dark);
+  color: var(--text-gold);
   padding: 40px 20px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font-main);
 }
 
 .container {
@@ -13,7 +21,7 @@
 .about-title {
   font-size: 36px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #ffd700;
+  border-bottom: 2px solid var(--text-gold);
   padding-bottom: 10px;
 }
 
@@ -27,7 +35,7 @@
 .about-subtitle {
   font-size: 24px;
   margin-top: 20px;
-  color: #fff;
+  color: var(--text-white);
 }
 
 .about-list {

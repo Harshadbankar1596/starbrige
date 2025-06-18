@@ -3,8 +3,20 @@
   --white: #ffffff;
   --gold: #d4af37;
   --dark-gray: #111111;
+  --darker-gray: #0d0d0d;
+  --deep-gray: #1a1a1a;
   --light-gray: #e0e0e0;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-light: rgba(255, 255, 255, 0.03);
+  --border-glow: 0 0 12px rgba(212, 175, 55, 0.3);
+  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f1c75b 100%);
+  --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --hover-box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+  --section-gradient: radial-gradient(circle at center, var(--deep-gray) 0%, var(--black) 100%);
+  --choose-gradient: linear-gradient(to right, var(--darker-gray), var(--deep-gray));
+  --inset-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.4);
 }
+
 
 body {
   background-color: var(--black);
@@ -12,98 +24,117 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
-  background: linear-gradient(to right, var(--black), #1a1a1a);
+  padding: 6rem 1.5rem 4rem;
+  background: var(--section-gradient);
   border-bottom: 2px solid var(--gold);
+  box-shadow: var(--shadow-deep);
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  color: var(--gold);
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.2rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--light-gray);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Section Titles */
 .title {
   text-align: center;
-  color: var(--gold);
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Offer Section */
 .offer-section {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 .offer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2.5rem;
 }
 
 .offer-box {
-  background-color: var(--dark-gray);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--gold);
-  padding: 1.5rem;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--border-glow);
+  transition: all 0.4s ease;
 }
 
 .offer-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--hover-box-shadow);
 }
 
 .offer-box h3 {
+  font-size: 1.6rem;
   color: var(--gold);
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .offer-box p {
   color: var(--light-gray);
+  font-size: 1.05rem;
 }
 
 /* Why Choose Us */
 .choose-section {
-  padding: 3rem 0;
-  background-color: #0d0d0d;
+  padding: 4rem 0;
+  background: var(--choose-gradient);
   border-top: 2px solid var(--gold);
+  box-shadow: var(--inset-shadow);
 }
 
 .choose-box {
   max-width: 700px;
   margin: 0 auto;
+  background: var(--glass-bg-light);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--gold);
+  backdrop-filter: blur(8px);
 }
 
 .choose-box ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .choose-box li {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
   color: var(--white);
   position: relative;
-  padding-left: 1.8rem;
+  padding-left: 2rem;
+  transition: color 0.3s ease;
 }
 
 .choose-box li::before {
@@ -111,5 +142,5 @@ body {
   position: absolute;
   left: 0;
   color: var(--gold);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }

@@ -1,44 +1,34 @@
+.service-box {
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.55); /* fallback if image fails */
+  /* बाकी styles नीचे जैसे थे वैसे ही रहेंगे */
+}
+
 .service-section {
   height: auto;
   padding: 10px;
   margin-bottom: 20px;
 }
 
-.s1{
-background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    /* ⬛ black overlay */
-    url("https://pbs.twimg.com/media/EEK9dOnUcAAomjg.jpg") center/cover no-repeat;
-  border: 1.5px solid #FFD700;
+.s1 {
+  background-image: url("https://pbs.twimg.com/media/EEK9dOnUcAAomjg.jpg");
 }
-.s2{
-background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    /* ⬛ black overlay */
-    url("https://i.ibb.co/gZ16z4rz/Pooja-Khambalkar.jpg") center/cover no-repeat;
-  border: 1.5px solid #FFD700;
+.s2 {
+  background-image: url("https://i.ibb.co/gZ16z4rz/Pooja-Khambalkar.jpg");
 }
-.s3{
-background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    /* ⬛ black overlay */
-    url("https://yt3.googleusercontent.com/qTigcew_23H1V8zxBo3W2ytjnvAvUovyMZQ-sA6nHaNuxnYCk66m3SXyrNUmeDEM2fWZen-B32M=s900-c-k-c0x00ffffff-no-rj") center/cover no-repeat;
-  border: 1.5px solid #FFD700;
+.s3 {
+  background-image: url("https://yt3.googleusercontent.com/qTigcew_23H1V8zxBo3W2ytjnvAvUovyMZQ-sA6nHaNuxnYCk66m3SXyrNUmeDEM2fWZen-B32M=s900-c-k-c0x00ffffff-no-rj");
 }
-.s4{
-background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    /* ⬛ black overlay */
-    url("https://dreamweddinghub.com/public/uploads/vendor_images/17188826652023-11-21.jpg") center/cover no-repeat;
-  border: 1.5px solid #FFD700;
+.s4 {
+  background-image: url("https://dreamweddinghub.com/public/uploads/vendor_images/17188826652023-11-21.jpg");
 }
-.s5{
-background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    /* ⬛ black overlay */
-    url("https://setmywed.com/blogs/wp-content/uploads/2024/04/download-34-1.jpeg") center/cover no-repeat;
-  border: 1.5px solid #FFD700;
+.s5 {
+  background-image: url("https://setmywed.com/blogs/wp-content/uploads/2024/04/download-34-1.jpeg");
 }
+
 
 .service-box {
   height: 15em;
@@ -47,8 +37,7 @@ background:
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 15px 12px;
   color: #FFD700;
   font-size: 1.05rem;
@@ -59,6 +48,22 @@ background:
   cursor: pointer;
   position: relative;
 }
+
+.service-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.service-box * {
+  position: relative;
+  z-index: 1;
+}
+
+
 
 .service-box:hover {
   transform: scale(1.03);

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './form.css';
 import { useNavigate } from 'react-router-dom';
-import axios from "axios";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -22,13 +21,24 @@ const Form = () => {
     console.log("Submitted Form Data:", formData);
 
     try {
-      const response = await axios.post("http://127.0.0.1:2323/formsubmit", {
-        name: formData.name,
-        mail: formData.email,   // Backend expects "mail"
-        phone: formData.phone
+      const response = await fetch("http://127.0.0.1:2323/formsubmit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          mail: formData.email, // Backend expects "mail"
+          phone: formData.phone
+        })
       });
 
-      console.log("Response from server:", response.data);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("Response from server:", data);
 
       alert('Form submitted successfully!');
       navigate('/');

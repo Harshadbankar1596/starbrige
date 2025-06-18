@@ -1,78 +1,175 @@
+:root {
+  --gold: #e4ae0b;
+  --white: #ffffff;
+  --fade-white: rgba(255, 255, 255, 0.8);
+  --black: #0f0f0f;
+
+  --text-heading: var(--gold);
+  --text-main: var(--fade-white);
+  --text-secondary: var(--white);
+
+  --bg-dark: var(--black);
+  --bg-light: var(--white);
+}
+
+/* Main container with background image */
 .containtbox {
-    position: relative;
-    height: 40em;
-    overflow: auto;
-    width: 100%;
-    overflow: hidden;
-    background-color: black;
-    align-content: center;
+  position: relative;
+  height: auto;
+  width: 97%;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* This acts as the background image with dark opacity */
 .containtbox::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../public/BCO.396f55b1-0376-4a9c-a16f-caf14375ca1d.png') center/cover no-repeat;
-    /* opacity: 0.3; */
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../public/BCO.396f55b1-0376-4a9c-a16f-caf14375ca1d.png') center/cover no-repeat;
+  filter: brightness(0.4) blur(1px);
+  z-index: 0;
 }
 
-.containtbox>* {
-    position: relative;
-    z-index: 1;
+.containtbox > * {
+  position: relative;
+  z-index: 1;
 }
 
+/* Text content */
 .paragraf {
-    width: 80%;
-    margin: auto;
-    color: white;
-    text-align: center;
+  width: 85%;
+  max-width: 1000px;
+  text-align: center;
+  color: var(--text-secondary);
+  animation: fadeInScale 1.2s ease-out;
+  margin-top: 4rem;
+  border-radius: 20px;
 }
 
 .paragraf .heading {
-    font-size: 3em;
-    font-weight: bolder;
-    padding: 10px;
-    color: goldenrod;
+  font-size: 3.5em;
+  font-weight: bold;
+  padding: 10px;
+  color: var(--text-heading);
+  /* animation: glowText 2s infinite alternate; */
 }
 
 .paragraf .middle {
-    font-size: 20px;
-    line-height: 1;
-    padding: 10px;
+  font-size: 1.3rem;
+  color: var(--text-main);
+  padding: 15px 10px;
+  line-height: 1.6;
 }
 
 .paragraf .footer {
-    font-size: 20px;
-    line-height: 1;
-    padding: 10px;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  padding: 10px;
+  line-height: 1.6;
 }
 
-/* .roll {
-    position: relative;
-    height:20em;
-    width: 100%;
-    overflow: hidden;
-    background-color: black;
-    align-content: center;
+/* Button styling */
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: var(--gold) solid 0.15em;
+  border-radius: 0.25em;
+  color: var(--gold);
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
 }
 
-.roll::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url() center/cover no-repeat;
-    z-index: 0;
+.button p {
+  z-index: 1;
 }
 
-.roll >* {
-    position: relative;
-    z-index: 1;
-} */
+.button:hover {
+  color: var(--bg-dark);
+}
+
+.button:active {
+  border-color: var(--gold);
+}
+
+.button::after, .button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: var(--white);
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: var(--white);
+}
+
+/* Animations */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px var(--gold), 0 0 10px var(--gold);
+  }
+  to {
+    text-shadow: 0 0 20px var(--gold), 0 0 30px var(--gold);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .paragraf .heading {
+    font-size: 2.2em;
+  }
+  .paragraf .middle,
+  .paragraf .footer {
+    font-size: 1.05rem;
+  }
+  .paragraf {
+    padding: 1.2rem;
+  }
+}
