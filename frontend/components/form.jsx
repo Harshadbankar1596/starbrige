@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './form.css';
-import { redirect } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -10,23 +10,39 @@ const Form = () => {
     phone: ''
   });
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Form submitted successfully!')
-     navigate('/');
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // ✅ Always at the top to stop page reload
+
+    console.log("Submitted Form Data:", formData);
+
+    try {
+      const response = await axios.post("http://127.0.0.1:2323/formsubmit", {
+        name: formData.name,
+        mail: formData.email,   // Backend expects "mail"
+        phone: formData.phone
+      });
+
+      console.log("Response from server:", response.data);
+
+      alert('Form submitted successfully!');
+      navigate('/');
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form.");
+    }
   };
 
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="form-box">
         <h2>Contact Us</h2>
-        
+
         <input
           type="text"
           name="name"
@@ -35,7 +51,7 @@ const navigate = useNavigate();
           value={formData.name}
           onChange={handleChange}
         />
-        
+
         <input
           type="email"
           name="email"
@@ -44,7 +60,7 @@ const navigate = useNavigate();
           value={formData.email}
           onChange={handleChange}
         />
-        
+
         <input
           type="tel"
           name="phone"
