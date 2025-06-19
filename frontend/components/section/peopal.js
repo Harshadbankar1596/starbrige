@@ -94,84 +94,6 @@ export const anchors = [
     },
 ];
 
-// export const anchors = [
-//     {
-//         name: "Namrata Shirsath",
-//         follwers: "10.6k",
-//         img:"/starbrige/photos/namratashirsath.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Neha patil",
-//         follwers: "12k",
-//         img: "/starbrige/photos/nehapatil.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "3 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "anchor Kalyani Sawale",
-//         follwers: "1.2k",
-//         img: "/starbrige/photos/klyanisawle.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "3 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Nisha Kuchekar",
-//         follwers: "7.6k",
-//         img: "/starbrige/photos/nishakuchekar.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Pooja Khambalkar",
-//         follwers: "50.5k",
-//         img: "/starbrige/photos/PoojaKhambalkar.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Snehal Nimbalkar ",
-//         follwers: "16.1k",
-//         img: "/starbrige/photos/snehalnimbekar.jpg",
-//         profession: null,
-//         experience: null,
-//         languages: null,
-//         specialization: null,
-//     },
-//     {
-//         name: "Vidula Baviskar",
-//         follwers: "8k",
-//         img: "/starbrige/photos/Vidulabaviskar.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-//     {
-//         name: "Shradha Deochakke",
-//         follwers: "1.2k",
-//         img: "/starbrige/photos/Shradha.jpg",
-//         profession: "Anchor | Emcee | Presenter",
-//         experience: "5 years of stage and event hosting",
-//         languages: "English | Marathi | Hindi",
-//         specialization: "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows",
-//     },
-// ];
-
-
-
-
 
 // Incluncer
 
@@ -219,27 +141,16 @@ export const influencers = [
 
 ]
 
+// writer
 
-
-
-
-
-
-
-
-
-
-
-
-//     [
-//     { id: 1, name: 'Shah Rukh Khan', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMdREudw3yc7e-0W5UgJO3EVnQfFgRJQcx7Q&s', followers: '25M' },
-//     { id: 2, name: 'Deepika Padukone', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA3nGKT5vrgH6P9kDoa0QkTFpb-WOqgUS-cw&s', followers: '18M' },
-//     { id: 3, name: 'Ranveer Singh', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSREbBzgmOG8xZHobWD46QzlvRCIMA2B7Lt5A&s', followers: '15M' },
-//     { id: 4, name: 'Alia Bhatt', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xhCc9IX-xLTKL7LbOREeeuJK8RBr5thtIg&s', followers: '22M' },
-//     { id: 5, name: 'Salman Khan', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Salman_Khan_in_2023_%281%29_%28cropped%29.jpg/250px-Salman_Khan_in_2023_%281%29_%28cropped%29.jpg', followers: '30M' },
-//     { id: 6, name: 'Katrina Kaif', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Katrina_Kaif_promoting_Sooryavanshi_on_KBC.jpg/250px-Katrina_Kaif_promoting_Sooryavanshi_on_KBC.jpg', followers: '20M' },
-//     { id: 7, name: 'Hrithik Roshan', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hrithik_at_Rado_launch.jpg/250px-Hrithik_at_Rado_launch.jpg', followers: '17M' },
-//     { id: 8, name: 'Kriti Sanon', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzhK7839YaECYmmO70JDRCENU9z5RZGK1PjQ&s', followers: '10M' },
-//     { id: 9, name: 'Varun Dhawan', img: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Varun_Dhawan_promoting_Badrinath_Ki_Dulhania.jpg ', followers: '14M' },
-//     { id: 10, name: 'Priyanka Chopra', img: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Priyanka_Chopra_at_Bulgary_launch%2C_2024_%28cropped%29.jpg', followers: '28M' },
-//   ]
+export const writers = [
+    {
+        name: "Rushikesh Aher",
+        img: "https://i.ibb.co/2JCKXBQ/Whats-App-Image-2025-06-19-at-21-32-42-c9a3508a.jpg",
+        profession: "Ghostwriting  Translation Services  Content Writing for books, websites, and more. Content Writing For digital Platforms",
+        experience: "3 year Translation Services  Content Writing for books",
+        languages: "English | Marathi | Hindi",
+        specialization:
+            "Content Writing For digital Platforms",
+    },
+]

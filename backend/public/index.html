@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create API Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 600px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: teal;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #007777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Create API Entry</h2>
+
+    <form action="/api" method="post" id="form">
+        <label for="category">Select Category</label>
+        <select name="category" id="category" required>
+            <option value="">-- Choose Category --</option>
+            <option value="actor">Actor</option>
+            <option value="anchor">Anchor</option>
+            <option value="influencer">Influencer</option>
+        </select>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Namrata Shirsath" required>
+
+        <label for="followers">Followers</label>
+        <input type="text" name="followers" id="followers" placeholder="10.6k" required>
+
+        <label for="img">Image URL</label>
+        <input type="url" name="img" id="img" placeholder="https://i.ibb.co/zhW4tCsN/namratashirsath.jpg" required>
+
+        <label for="profession">Profession</label>
+        <input type="text" name="profession" id="profession" placeholder="Anchor | Emcee | Presenter" required>
+
+        <label for="experience">Experience</label>
+        <input type="text" name="experience" id="experience" placeholder="5 years of stage and event hosting" required>
+
+        <label for="languages">Languages</label>
+        <input type="text" name="languages" id="languages" placeholder="English | Marathi | Hindi" required>
+
+        <label for="specialization">Specialization</label>
+        <textarea name="specialization" id="specialization" rows="4" place
+            holder="Cultural events, Corporate shows, Weddings..." required></textarea>
+
+        <button id="submit">Create API Entry</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

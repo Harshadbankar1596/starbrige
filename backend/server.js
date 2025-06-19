@@ -1,17 +1,22 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import mongoose from "mongoose";
 import { fileURLToPath } from "url";
 import path from "path";
 import cors from "cors"
+import { actor, anchor, influencer } from './models/all.js';
 
 const app = express();
 const port = 2323;
 
-app.use(cors())
-app.use(express.json());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+app.use(cors())
+app.use(express.json());
+app.use(urlencoded())
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.connect("mongodb://localhost:27017/starbrigeforms").then(() => {
     console.log("MongoDB connected");
@@ -26,12 +31,25 @@ const formdata = new mongoose.Schema({
 });
 const form = mongoose.model("form", formdata);
 
+
 app.get("/", (req, res) => {
-    res.send({
-        name: "harshad",
-        id: 24005,
-        age: 19
-    });
+    res.sendFile("./public/index.html", { root: __dirname })
+});
+
+
+app.get("/actors", async(req, res) => {
+    const Actor = await actor.find()
+    res.send(Actor)
+});
+
+app.get("/anchors", async(req, res) => {
+    const Anchor = await anchor.find()
+    res.send(Anchor)
+});
+
+app.get("/influensers", async(req, res) => {
+    const Influenser = await influencer.find()
+    res.send(Influenser)
 });
 
 app.post("/formsubmit", async (req, res) => {
@@ -50,6 +68,38 @@ app.post("/formsubmit", async (req, res) => {
     }
 });
 
+app.post("/api", async (req, res) => {
+    console.log(req.body)
+
+    const { category, name, followers, img, profession, experience, languages, specialization } = req.body;
+
+    // Pick the correct model
+    let Model;
+    if (category === 'actor') Model = actor;
+    else if (category === 'anchor') Model = anchor;
+    else if (category === 'influencer') Model = influencer;
+    else return res.status(400).send("Invalid category");
+
+    try {
+        const data = new Model({
+            name,
+            followers,
+            img,
+            profession,
+            experience,
+            languages,
+            specialization
+        });
+
+        await data.save();
+        console.log("Data saved:", data);
+        // alert("data sucssesfully saved")
+        res.sendFile("./public/index.html" , {root : __dirname})
+    } catch (error) {
+        console.log("Error saving data:", error);
+        res.status(500).send("Server error");
+    }
+});
 app.listen(port, () => {
     console.log("App listening on port", port);
 });

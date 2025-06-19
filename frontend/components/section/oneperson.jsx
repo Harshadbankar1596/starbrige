@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { actors, anchors, influencers } from './peopal';
+import { actors, anchors, influencers ,writers} from './peopal';
 import './oneperson.css';
 
 const Oneperson = () => {
@@ -19,6 +19,7 @@ const Oneperson = () => {
   if (type === 'actors') list = actors;
   else if (type === 'anchors') list = anchors;
   else if (type === 'influencers') list = influencers;
+  else if (type === 'writers') list = writers;
 
   const person = list.find(
     (p) => p.name.toLowerCase().trim() === decodedName
@@ -39,24 +40,38 @@ const Oneperson = () => {
         </div>
         <div className="info-section">
           <h2 className="person-name">{person.name}</h2>
-          <p className="person-followers">
-            <strong>Followers:</strong> {displayValue(person.follwers)}
-          </p>
-          <p className="person-profession">
-            <strong>Profession:</strong> {displayValue(person.profession)}
-          </p>
-          <p className="person-experience">
-            <strong>Experience:</strong> {displayValue(person.experience)}
-          </p>
-          <p className="person-languages">
-            <strong>Languages:</strong> {displayValue(person.languages)}
-          </p>
-          <p className="person-specialization">
-            <strong>Specialization:</strong> {displayValue(person.specialization)}
-          </p>
 
-          {/* Book Me Button */}
-          <Link to={"/form"} className="book-btn">
+          {person.follwers && (
+            <p className="person-followers">
+              <strong>Followers:</strong> {person.follwers}
+            </p>
+          )}
+
+          {person.profession && (
+            <p className="person-profession">
+              <strong>Profession:</strong> {person.profession}
+            </p>
+          )}
+
+          {person.experience && (
+            <p className="person-experience">
+              <strong>Experience:</strong> {person.experience}
+            </p>
+          )}
+
+          {person.languages && (
+            <p className="person-languages">
+              <strong>Languages:</strong> {person.languages}
+            </p>
+          )}
+
+          {person.specialization && (
+            <p className="person-specialization">
+              <strong>Specialization:</strong> {person.specialization}
+            </p>
+          )}
+
+          <Link to="/form" className="book-btn">
             Book Me
           </Link>
         </div>

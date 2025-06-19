@@ -19,11 +19,15 @@ const Servis = () => {
           <div className="box-title">Influencers</div>
           <p className="box-desc">Click to connect with influencers</p>
         </Link>
-        <Link to="/mehandi-artists" className="service-box s4">
+        <Link to="/writers" className="service-box s4">
+          <div className="box-title">writers</div>
+          <p className="box-desc">Click to connect with writers</p>
+        </Link>
+        <Link to="/mehandi-artists" className="service-box s5">
           <div className="box-title">Mehandi Artists</div>
           <p className="box-desc">Mehandi artists for your events</p>
         </Link>
-        <Link to="/makeup-artists" className="service-box s5">
+        <Link to="/makeup-artists" className="service-box s6">
           <div className="box-title">Makeup Artists</div>
           <p className="box-desc">professional makeup artists</p>
         </Link>

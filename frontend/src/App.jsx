@@ -33,6 +33,7 @@ const App = () => {
         <Route path="/actors" element={<Actors obj={"actors"} />} />
         <Route path="/anchors" element={<Actors obj={"anchors"} />} />
         <Route path="/influencers" element={<Actors obj={"influencers"} />} />
+        <Route path="/writers" element={<Actors obj={"writers"} />} />
         <Route path="/mehandi artist" element={<Actors obj={"mehandiartist"} />} />
         <Route path="/makeup artist" element={<Actors obj={"makeup artist"} />} />
         <Route path="/:type/:name" element={<Oneperson />} />
