@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import './containt.css';
 
 const videos = [
-  { id: 1, url: './public/goku.mp4' },
-  { id: 2, url: './public/natur.mp4' },
-  { id: 3, url: './public/pic.mp4' }
+  { id: 1, url: 'process.env.PUBLIC_URL/goku.mp4' },
+  { id: 2, url: 'process.env.PUBLIC_URL/goku.mp4' },
+  { id: 3, url: 'process.env.PUBLIC_URL/goku.mp4' }
 ];
 
 const Containt = () => {
