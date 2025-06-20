@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://YourUsername.github.io/starbrige",
+  "homepage": "https://harshadbankar1596.github.io/starbrige",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

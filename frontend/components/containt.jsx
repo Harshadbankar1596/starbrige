@@ -2,13 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './containt.css';
 
-const videos = [
-  { id: 1, url: 'process.env.PUBLIC_URL/goku.mp4' },
-  { id: 2, url: 'process.env.PUBLIC_URL/goku.mp4' },
-  { id: 3, url: 'process.env.PUBLIC_URL/goku.mp4' }
-];
+
 
 const Containt = () => {
+  const videos = [
+  { id: 1, url: "/goku.mp4" },
+  { id: 2, url: "/goku2.mp4" },
+  { id: 3, url: "/goku3.mp4" }
+];
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef(null);
 
