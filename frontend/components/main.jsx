@@ -1,5 +1,6 @@
 import React from 'react';
 import './main.css';
+import Servis from "../components/servis";
 
 const MainContent = () => {
   return (
@@ -33,16 +34,18 @@ const MainContent = () => {
         </div>
       </section>
 
+    <Servis />
+
       {/* Why Choose Us Section */}
       <section className="choose-section">
         <h2 className="title">Why Choose Us?</h2>
         <div className="choose-box">
           <ul>
-            <li>✅ Verified celebrities & creators</li>
-            <li>✅ Transparent pricing & direct bookings</li>
-            <li>✅ Support with planning & execution</li>
-            <li>✅ Customizable packages for all budgets</li>
-            <li>✅ Pan-India network with real-time availability</li>
+            <li>Verified celebrities & creators</li>
+            <li>Transparent pricing & direct bookings</li>
+            <li>Support with planning & execution</li>
+            <li>Customizable packages for all budgets</li>
+            <li>Pan-India network with real-time availability</li>
           </ul>
         </div>
       </section>

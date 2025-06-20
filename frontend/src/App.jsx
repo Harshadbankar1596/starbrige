@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from "../components/nav";
 import Content from "../components/containt";
 import Main from "../components/main";
-import Servis from "../components/servis";
+// import Servis from "../components/servis";
 import Footer from "../components/footer";
 import About from '../components/about';
 import Actors from "../components/section/actor"
@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <Content />
       <Main />
-      <Servis />
+      {/* <Servis /> */}
     </>
   );
 };

@@ -1,21 +1,62 @@
 :root {
-  --black: #000000;
-  --white: #ffffff;
-  --gold: #d4af37;
-  --dark-gray: #111111;
-  --darker-gray: #0d0d0d;
-  --deep-gray: #1a1a1a;
-  --light-gray: #e0e0e0;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-bg-light: rgba(255, 255, 255, 0.03);
-  --border-glow: 0 0 12px rgba(212, 175, 55, 0.3);
-  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f1c75b 100%);
+  /* Core Metallics */
+  --metal-dark: #2c2c2c;
+  /* Gunmetal */
+  --metal-light: #c0c0c0;
+  /* Chrome */
+  --metal-silver: #d4d4d4;
+  /* Bright Silver */
+  --metal-steel: #7f8c8d;
+  /* Stainless Steel */
+  --metal-titanium: #3a3f44;
+  /* Titanium Gray */
+
+  /* Accents */
+  --metal-blue: #4a90e2;
+  /* Metallic Blue */
+  --metal-red: #c0392b;
+  /* Metallic Red */
+  --metal-green: #27ae60;
+  /* Metallic Green */
+  --metal-purple: #8e44ad;
+  /* Metallic Purple */
+  --metal-gold: #d4af37;
+  /* Classic Gold */
+  --metal-copper: #b87333;
+  /* Copper */
+  --metal-rose: #b76e79;
+  /* Rose Gold */
+  --metal-bronze: #cd7f32;
+  /* Bronze */
+
+  /* Glass Effects */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-bg-light: rgba(255, 255, 255, 0.025);
+
+  /* Shadows & Glows */
+  --border-glow: 0 0 12px rgba(192, 192, 192, 0.3);
+  /* silver glow */
   --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.4);
-  --hover-box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
-  --section-gradient: radial-gradient(circle at center, var(--deep-gray) 0%, var(--black) 100%);
-  --choose-gradient: linear-gradient(to right, var(--darker-gray), var(--deep-gray));
-  --inset-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.4);
+  --hover-box-shadow: 0 6px 25px rgba(192, 192, 192, 0.4);
+
+  /* Gradients */
+  --chrome-gradient: linear-gradient(135deg, #d4d4d4 0%, #a0a0a0 100%);
+  --steel-gradient: linear-gradient(135deg, #7f8c8d, #2c2c2c);
+  --gold-gradient: linear-gradient(135deg, #f1c75b, #d4af37);
+  --copper-gradient: linear-gradient(135deg, #b87333, #a0522d);
+  --rose-gold-gradient: linear-gradient(135deg, #f7cac9, #b76e79);
+  --section-gradient: radial-gradient(circle at center, var(--metal-dark) 0%, var(--black) 100%);
+  --choose-gradient: linear-gradient(to right, var(--metal-dark), var(--metal-steel));
+
+  /* Core background & text */
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --light-gray: #e0e0e0;
+  --text-main: var(--metal-light);
+  --text-heading: var(--metal-silver);
 }
+
+
 
 /* :root {
   --black: #000000;
@@ -49,22 +90,40 @@
 } */
 
 
-  /* body {
+/* body {
     background-color: var(--black);
     color: var(--white);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-  }  */
+  } 
+
+/* :root {
+  --black: #000000;
+  --white: #ffffff;
+  --gold: #d4af37;
+  --dark-gray: #111111;
+  --darker-gray: #0d0d0d;
+  --deep-gray: #1a1a1a;
+  --light-gray: #e0e0e0;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-light: rgba(255, 255, 255, 0.03);
+  --border-glow: 0 0 12px rgba(212, 175, 55, 0.3);
+  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f1c75b 100%);
+  --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --hover-box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+  --section-gradient: radial-gradient(circle at center, var(--deep-gray) 0%, var(--black) 100%);
+  --choose-gradient: linear-gradient(to right, var(--darker-gray), var(--deep-gray));
+  --inset-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.4);
+} */
 
 .main-container {
   max-width: 1200px;
-  /* padding: 3rem 1.5rem; */
   margin: 0 auto;
+  /* padding: 2rem 1rem; */
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 6rem 1.5rem 4rem;
@@ -76,7 +135,7 @@
 .hero h1 {
   font-size: 3.2rem;
   background: var(--gold-gradient);
-  -webkit-background-clip: text;  
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.2rem;
 }
@@ -88,7 +147,6 @@
   margin: 0 auto;
 }
 
-/* Section Titles */
 .title {
   text-align: center;
   font-size: 2.4rem;
@@ -98,7 +156,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Offer Section */
 .offer-section {
   padding: 4rem 0;
 }
@@ -135,44 +192,116 @@
   font-size: 1.05rem;
 }
 
-/* Why Choose Us */
-
 .choose-section {
+  position: relative;
   padding: 4rem 0;
-  background: var(--choose-gradient);
   border-top: 2px solid var(--gold);
   box-shadow: var(--inset-shadow);
+  background: var(--choose-gradient);
+  /* fallback */
+  overflow: hidden;
+  z-index: 0;
+  align-items: center;
+}
+
+.choose-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.squarespace-cdn.com/content/v1/5c90fe2eaf468307c83acde2/0b0077d9-e016-46d2-9d16-bc3cbf36ecc7/TPXM0lLvzMDIkMqnu9cFZS3ie8rMMNIl1658435216.jpg?format=1500w");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.9;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ✅ Ensure all direct child elements appear above the background */
+.choose-section>* {
+  position: relative;
+  z-index: 1;
 }
 
 .choose-box {
-  max-width: 700px;
-  margin: 0 auto;
-  background: var(--glass-bg-light);
-  border-radius: 1rem;
-  padding: 2rem;
-  border: 1px solid var(--gold);
-  backdrop-filter: blur(8px);
+  padding: 20px;
+  line-height: 3;
+  width: 50%;
+  border: 2px solid;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  color: var(--light-gray);
 }
 
-.choose-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+
+/* -------------------
+   ✅ Responsive Design
+-------------------- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .offer-box h3 {
+    font-size: 1.4rem;
+  }
+
+  .offer-box p {
+    font-size: 1rem;
+  }
+
+  .choose-box li {
+    font-size: 1.1rem;
+  }
 }
 
-.choose-box li {
-  font-size: 1.2rem;
-  margin-bottom: 1.2rem;
-  color: var(--white);
-  position: relative;
-  padding-left: 2rem;
-  transition: color 0.3s ease;
-}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 
-.choose-box li::before {
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-size: 1.3rem;
-}
+  .hero p {
+    font-size: 1rem;
+  }
 
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .main-container {
+    padding: 1rem 0.8rem;
+  }
+
+  .choose-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .offer-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .choose-box li {
+    font-size: 1rem;
+  }
+}

@@ -14,7 +14,7 @@
 
 /* Main container with background image */
 .containtbox {
-  height: auto;
+  height: 90vh;
   padding-bottom: 50px;
   width: 100%;
   overflow: hidden;
