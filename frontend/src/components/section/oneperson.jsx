@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { actors, anchors, influencers ,writers} from './peopal';
+import { actors, anchors, influencers , writers , reelshoots} from './peopal';
 import './oneperson.css';
 
 const Oneperson = () => {
@@ -20,6 +20,7 @@ const Oneperson = () => {
   else if (type === 'anchors') list = anchors;
   else if (type === 'influencers') list = influencers;
   else if (type === 'writers') list = writers;
+  else if (type === 'reelshoots') list = reelshoots;
 
   const person = list.find(
     (p) => p.name.toLowerCase().trim() === decodedName

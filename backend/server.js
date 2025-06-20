@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express, { urlencoded } from "express";
 import mongoose from "mongoose";
 import { fileURLToPath } from "url";
@@ -6,7 +8,7 @@ import cors from "cors"
 import { actor, anchor, influencer } from './models/all.js';
 
 const app = express();
-const port = 2323;
+const port = process.env.PORT
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -18,7 +20,7 @@ app.use(urlencoded())
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect("mongodb://localhost:27017/starbrigeforms").then(() => {
+mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("MongoDB connected");
 }).catch(() => {
     console.log("Failed to connect to MongoDB");
@@ -47,7 +49,7 @@ app.get("/anchors", async(req, res) => {
     res.send(Anchor)
 });
 
-app.get("/influensers", async(req, res) => {
+app.get("/influencers", async(req, res) => {
     const Influenser = await influencer.find()
     res.send(Influenser)
 });

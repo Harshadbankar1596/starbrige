@@ -232,9 +232,9 @@
 }
 
 .choose-box {
-  padding: 20px;
+  padding: 60px;
   line-height: 3;
-  width: 50%;
+  width: 60%;
   border: 2px solid;
   border-radius: 20px;
   backdrop-filter: blur(10px);
@@ -245,6 +245,10 @@
   color: var(--light-gray);
 }
 
+.choose-box li {
+  
+  color: var(--gold);      /* text color set karne ke liye */
+}
 
 
 /* -------------------
@@ -269,6 +273,10 @@
 
   .offer-box p {
     font-size: 1rem;
+  }
+
+  .choose-box{
+    padding: 20px;
   }
 
   .choose-box li {
@@ -300,6 +308,10 @@
   .offer-box {
     padding: 1.5rem 1rem;
   }
+
+   .choose-box{
+    padding: 50px;
+  } 
 
   .choose-box li {
     font-size: 1rem;

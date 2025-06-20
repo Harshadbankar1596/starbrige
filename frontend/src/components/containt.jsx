@@ -8,7 +8,6 @@ const Containt = () => {
   const videos = [
   { id: 1, url: "https://www.w3schools.com/html/mov_bbb.mp4" },
   { id: 2, url: "https://filesamples.com/samples/video/mp4/sample_640x360.mp4" },
-  { id: 3, url: "https://archive.org/download/TearsOfSteel/TearsOfSteel_4000.mp4" }
 ];
 
   const [current, setCurrent] = useState(0);

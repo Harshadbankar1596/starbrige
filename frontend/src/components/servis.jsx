@@ -23,6 +23,10 @@ const Servis = () => {
           <div className="box-title">writers</div>
           <p className="box-desc">Click to connect with writers</p>
         </Link>
+        <Link to="/reelshoots" className="service-box s7">
+          <div className="box-title">Reel-Shoot and Camera-Man</div>
+          <p className="box-desc">Click to connect with Cameraman</p>
+        </Link>
         <Link to="/mehandi-artists" className="service-box s5">
           <div className="box-title">Mehandi Artists</div>
           <p className="box-desc">Mehandi artists for your events</p>

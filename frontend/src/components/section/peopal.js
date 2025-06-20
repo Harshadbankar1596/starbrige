@@ -154,3 +154,11 @@ export const writers = [
             "Content Writing For digital Platforms",
     },
 ]
+
+export const reelshoots = [
+    {
+        name: "Rushikesh gadekar",
+        follwers: "1M",
+        img: "https://yt3.googleusercontent.com/qTigcew_23H1V8zxBo3W2ytjnvAvUovyMZQ-sA6nHaNuxnYCk66m3SXyrNUmeDEM2fWZen-B32M=s900-c-k-c0x00ffffff-no-rj"
+    },
+]

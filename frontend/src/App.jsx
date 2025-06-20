@@ -2,15 +2,15 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Components
-import Nav from "../components/nav";
-import Content from "../components/containt";
-import Main from "../components/main";
+import Nav from "./components/nav";
+import Content from "./components/containt";
+import Main from "./components/main";
 // import Servis from "../components/servis";
-import Footer from "../components/footer";
-import About from '../components/about';
-import Actors from "../components/section/actor"
-import Oneperson from '../components/section/oneperson';
-import Form from "../components/form"
+import Footer from "./components/footer";
+import About from './components/about';
+import Actors from "./components/section/actor"
+import Oneperson from './components/section/oneperson';
+import Form from "./components/form"
 
 const Home = () => {
   return (
@@ -34,6 +34,7 @@ const App = () => {
         <Route path="/anchors" element={<Actors obj={"anchors"} />} />
         <Route path="/influencers" element={<Actors obj={"influencers"} />} />
         <Route path="/writers" element={<Actors obj={"writers"} />} />
+        <Route path="/reelshoots" element={<Actors obj={"reelshoots"} />} />
         <Route path="/mehandi artist" element={<Actors obj={"mehandiartist"} />} />
         <Route path="/makeup artist" element={<Actors obj={"makeup artist"} />} />
         <Route path="/:type/:name" element={<Oneperson />} />

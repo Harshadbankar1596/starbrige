@@ -1,7 +1,10 @@
 import React, { useEffect, useRef , useState} from 'react';
 import './all.css';
-import { actors, anchors , influencers , writers} from './peopal'; // fix import
+import { actors, anchors , influencers , writers , reelshoots} from './peopal'; // fix import
 import { Link } from 'react-router-dom';
+const apiUrl = import.meta.env.VITE_API_URL;
+console.log("API Base URL:", apiUrl);
+
 
 const Actor = (props) => {
   const scrollRef = useRef(null);
@@ -16,7 +19,7 @@ const Actor = (props) => {
 
   //  async function call() {
   //     try {
-  //       const url = await fetch(`http://127.0.0.1:2323/${props.obj}`)
+  //       const url = await fetch(`${apiUrl}/${props.obj}`)
   //       let json = await url.json()
   //       setdata(json)
   //       console.log("data" , json);
@@ -27,7 +30,7 @@ const Actor = (props) => {
   //   }
   // call()
   
-    let os = props.obj === "actors" ? actors : props.obj === "anchors" ? anchors : props.obj == "influencers" ? influencers : props.obj == "writers" ? writers : []
+    let os = props.obj === "actors" ? actors : props.obj === "anchors" ? anchors : props.obj == "influencers" ? influencers : props.obj == "writers" ? writers : props.obj == "reelshoots" ? reelshoots : []
     setdata(os)
 
   }, [props.obj]);
