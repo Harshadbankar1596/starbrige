@@ -10,6 +10,7 @@
 
 
 .nav {
+  z-index: 1;
   height: 4em;
   display: flex;
   background-color: var(--black);
@@ -17,6 +18,7 @@
   justify-content: space-between;
   padding: 0 20px;
   border-bottom: 1px solid var(--nav-border);
+  /* box-shadow: inset -1px -2px 100px white; */
 }
 
 .logosectio {

@@ -17,20 +17,51 @@
   --inset-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
+/* :root {
+  --black: #000000;
+  --white: #ffffff;
 
-body {
-  background-color: var(--black);
-  color: var(--white);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+  
+  --gold: #3a5fa9; 
+
+  
+  --dark-gray: #0f1115;
+  --darker-gray: #0a0c10;
+  --deep-gray: #14181f;
+  --light-gray: #cfd8dc;
+
+  
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-light: rgba(255, 255, 255, 0.03);
+
+  
+  --border-glow: 0 0 12px rgba(58, 95, 169, 0.4);
+  --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --hover-box-shadow: 0 6px 25px rgba(58, 95, 169, 0.5);
+
+  
+  --gold-gradient: linear-gradient(135deg, #3a5fa9 0%, #6c8ed2 100%);
+  --section-gradient: radial-gradient(circle at center, var(--deep-gray) 0%, var(--black) 100%);
+  --choose-gradient: linear-gradient(to right, var(--darker-gray), var(--deep-gray));
+
+ 
+  --inset-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.4);
+} */
+
+
+  /* body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }  */
 
 .main-container {
   max-width: 1200px;
+  /* padding: 3rem 1.5rem; */
   margin: 0 auto;
-  padding: 3rem 1.5rem;
 }
 
 /* Hero Section */
@@ -45,7 +76,7 @@ body {
 .hero h1 {
   font-size: 3.2rem;
   background: var(--gold-gradient);
-  -webkit-background-clip: text;
+  -webkit-background-clip: text;  
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.2rem;
 }
@@ -105,6 +136,7 @@ body {
 }
 
 /* Why Choose Us */
+
 .choose-section {
   padding: 4rem 0;
   background: var(--choose-gradient);
@@ -138,9 +170,9 @@ body {
 }
 
 .choose-box li::before {
-  content: "✔";
   position: absolute;
   left: 0;
   color: var(--gold);
   font-size: 1.3rem;
 }
+

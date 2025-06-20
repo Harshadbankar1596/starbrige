@@ -5,17 +5,37 @@
   --color-gray: #aaaaaa;
   --color-border: #333333;
 
-  /* Text Colors */
+  
   --text-primary: var(--color-white);
   --text-secondary: var(--color-gray);
   --text-highlight: var(--color-gold);
 
-  /* Backgrounds */
+ 
   --bg-footer: var(--color-black);
 
-  /* Border Colors */
+  
   --border-footer: var(--color-border);
 }
+/* 
+:root {
+  --color-black: #0a0c10;
+  --color-white: #ffffff;
+  --color-gold: #3a5fa9;      
+  --color-gray: #b0bec5;       
+  --color-border: #37474f;     
+
+  
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-gray);
+  --text-highlight: var(--color-gold);  
+
+  
+  --bg-footer: var(--color-black);      
+
+  
+  --border-footer: var(--color-border); 
+} */
+
 
 .footer-container {
   background-color: var(--bg-footer);
