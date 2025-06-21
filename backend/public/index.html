@@ -1,94 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Create API Entry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f9f9f9;
-        }
+  <meta charset="UTF-8">
+  <title>Talent Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
 
-        form {
-            background: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            max-width: 600px;
-        }
+    h2 {
+      color: #222;
+      margin-bottom: 10px;
+    }
 
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+    nav {
+      margin-bottom: 20px;
+    }
 
-        input,
-        textarea,
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+    nav button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      background-color: #666;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: teal;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+    nav button.active {
+      background-color: #111;
+    }
 
-        button:hover {
-            background-color: #007777;
-        }
-    </style>
+    form {
+      display: none;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 650px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    form.active {
+      display: block;
+    }
+
+    form.create {
+      background: #e0f7fa; /* light blue */
+    }
+
+    form.update {
+      background: #fff3e0; /* light orange */
+    }
+
+    form.delete {
+      background: #ffebee; /* light red */
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+    }
+
+    button.submit-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: teal;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button.submit-btn:hover {
+      background-color: #007777;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+  </style>
 </head>
-
 <body>
 
-    <h2>Create API Entry</h2>
+  <h2>Talent Management Dashboard</h2>
 
-    <form action="/api" method="post" id="form">
-        <label for="category">Select Category</label>
-        <select name="category" id="category" required>
-            <option value="">-- Choose Category --</option>
-            <option value="actor">Actor</option>
-            <option value="anchor">Anchor</option>
-            <option value="influencer">Influencer</option>
-        </select>
+  <nav>
+    <button onclick="showForm('create')" class="active">➕ Add</button>
+    <button onclick="showForm('update')">✏️ Update</button>
+    <button onclick="showForm('delete')">🗑️ Delete</button>
+  </nav>
 
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="Namrata Shirsath" required>
+  <!-- Create Form -->
+  <form id="create-form" class="create active" action="/api" method="POST">
+    <span class="section-title">➕ Add New User</span>
 
-        <label for="followers">Followers</label>
-        <input type="text" name="followers" id="followers" placeholder="10.6k" required>
+    <label>Category</label>
+    <select name="category" id="create-category" required></select>
 
-        <label for="img">Image URL</label>
-        <input type="url" name="img" id="img" placeholder="https://i.ibb.co/zhW4tCsN/namratashirsath.jpg" required>
+    <label>Name</label>
+    <input type="text" name="name" placeholder="e.g. Namrata Shirsath" required>
 
-        <label for="profession">Profession</label>
-        <input type="text" name="profession" id="profession" placeholder="Anchor | Emcee | Presenter" required>
+    <label>Followers</label>
+    <input type="text" name="followers">
 
-        <label for="experience">Experience</label>
-        <input type="text" name="experience" id="experience" placeholder="5 years of stage and event hosting" required>
+    <label>Image URL</label>
+    <input type="url" name="img" required>
 
-        <label for="languages">Languages</label>
-        <input type="text" name="languages" id="languages" placeholder="English | Marathi | Hindi" required>
+    <label>Profession</label>
+    <input type="text" name="profession" required>
 
-        <label for="specialization">Specialization</label>
-        <textarea name="specialization" id="specialization" rows="4" place
-            holder="Cultural events, Corporate shows, Weddings..." required></textarea>
+    <label>Experience</label>
+    <input type="text" name="experience">
 
-        <button id="submit">Create API Entry</button>
-    </form>
-    <script src="script.js"></script>
+    <label>Languages</label>
+    <input type="text" name="languages">
+
+    <label>Specialization</label>
+    <textarea name="specialization" rows="3" required></textarea>
+
+    <button type="submit" class="submit-btn">Add User</button>
+  </form>
+
+  <!-- Update Form -->
+  <form id="update-form" class="update" action="/api/update/user" method="POST">
+    <span class="section-title">✏️ Update Existing User</span>
+
+    <label>Category</label>
+    <select name="category" id="update-category" required></select>
+
+    <label>Name (existing)</label>
+    <input type="text" name="name" required>
+
+    <label>Followers</label>
+    <input type="text" name="followers">
+
+    <label>Image URL</label>
+    <input type="url" name="img">
+
+    <label>Profession</label>
+    <input type="text" name="profession">
+
+    <label>Experience</label>
+    <input type="text" name="experience">
+
+    <label>Languages</label>
+    <input type="text" name="languages">
+
+    <label>Specialization</label>
+    <textarea name="specialization" rows="3"></textarea>
+
+    <button type="submit" class="submit-btn">Update User</button>
+  </form>
+
+  <!-- Delete Form -->
+  <form id="delete-form" class="delete" action="/api/delete/user" method="POST">
+    <span class="section-title">🗑️ Delete User</span>
+
+    <label>Category</label>
+    <select name="category" id="delete-category" required></select>
+
+    <label>Name (to delete)</label>
+    <input type="text" name="name" required>
+
+    <button type="submit" class="submit-btn">Delete User</button>
+  </form>
+
+  <script>
+    const categories = [
+      "actor",
+      "anchor",
+      "influencer",
+      "writer",
+      "reelshoot",
+      "mehendiartist",
+      "makeupartist",
+      "cameraman"
+    ];
+
+    function populateDropdowns() {
+      ["create-category", "update-category", "delete-category"].forEach(id => {
+        const select = document.getElementById(id);
+        categories.forEach(cat => {
+          const option = document.createElement("option");
+          option.value = cat;
+          option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+          select.appendChild(option);
+        });
+      });
+    }
+
+    function showForm(type) {
+      document.querySelectorAll("form").forEach(f => f.classList.remove("active"));
+      document.getElementById(`${type}-form`).classList.add("active");
+
+      document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll("nav button")[["create", "update", "delete"].indexOf(type)].classList.add("active");
+    }
+
+    populateDropdowns();
+  </script>
 </body>
-
 </html>

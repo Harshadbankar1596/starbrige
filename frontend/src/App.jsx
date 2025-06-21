@@ -30,13 +30,13 @@ const App = () => {
         <Route path="*" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/actors" element={<Actors obj={"actors"} />} />
-        <Route path="/anchors" element={<Actors obj={"anchors"} />} />
-        <Route path="/influencers" element={<Actors obj={"influencers"} />} />
-        <Route path="/writers" element={<Actors obj={"writers"} />} />
-        <Route path="/reelshoots" element={<Actors obj={"reelshoots"} />} />
-        <Route path="/mehandi artist" element={<Actors obj={"mehandiartist"} />} />
-        <Route path="/makeup artist" element={<Actors obj={"makeup artist"} />} />
+        <Route path="/actors" element={<Actors obj={"actor"} />} />
+        <Route path="/anchors" element={<Actors obj={"anchor"} />} />
+        <Route path="/influencers" element={<Actors obj={"influencer"} />} />
+        <Route path="/writers" element={<Actors obj={"writer"} />} />
+        <Route path="/reelshoots" element={<Actors obj={"reelshoot"} />} />
+        <Route path="/mehandiartist" element={<Actors obj={"mehendiartist"} />} />
+        <Route path="/makeupartist" element={<Actors obj={"makeupartist"} />} />
         <Route path="/:type/:name" element={<Oneperson />} />
         <Route path="/form" element={<Form />} />
       </Routes>
