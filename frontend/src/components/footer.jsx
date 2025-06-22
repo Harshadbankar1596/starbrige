@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className="footer-right">
           <h3>Contact Us</h3>
-          <p>Call / WhatsApp: <a href="tel:+91XXXXXXXXXX">+91XXXXXXXXXX</a></p>
+          <p>Call / WhatsApp: <a href="tel:+919404823867">+919404823867</a></p>
           <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
           <p>Website: <a href="https://yourdomain.com" target="_blank" rel="noreferrer">yourdomain.com</a></p>
         </div>
