@@ -1,73 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './form.css';
-import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
+  const location = useLocation();
+  const { type, name: talentName } = location.state || {};
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    yourname: '',
+    city: '',
     phone: ''
   });
-
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // ✅ Always at the top to stop page reload
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    console.log("Submitted Form Data:", formData);
+    const { yourname, city, phone } = formData;
 
-    try {
-      const response = await fetch("http://127.0.0.1:2323/formsubmit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          mail: formData.email, // Backend expects "mail"
-          phone: formData.phone
-        })
-      });
+    const message = `Celebrity Booking Request 📩
+%0A Talent name : ${talentName || "N/A"}
+%0A Category : ${type || "N/A"}
+%0A Name : ${yourname}
+%0A City : ${city}
+%0A Phone : ${phone}`;
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log("Response from server:", data);
-
-      alert('Form submitted successfully!');
-      navigate('/');
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Failed to submit form.");
-    }
+    const whatsappNumber = '7028445707';
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappURL, '_blank');
   };
 
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="form-box">
-        <h2>Contact Us</h2>
+        <h2>Book Talent</h2>
 
         <input
           type="text"
-          name="name"
-          placeholder="Enter your name"
+          name="yourname"
+          placeholder="Enter your full name"
           required
-          value={formData.name}
+          value={formData.yourname}
           onChange={handleChange}
         />
 
         <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
+          type="text"
+          placeholder="celebrity name"
+          value={talentName || ''}
+          readOnly
+        />
+
+        <input
+          type="text"
+          placeholder="celebrity Category"
+          value={type || ''}
+          readOnly
+        />
+
+        <input
+          type="text"
+          name="city"
+          placeholder="Enter your city"
           required
-          value={formData.email}
+          value={formData.city}
           onChange={handleChange}
         />
 
