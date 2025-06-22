@@ -6,9 +6,9 @@ import './containt.css';
 
 const Containt = () => {
   const videos = [
-  { id: 1, url: "https://www.w3schools.com/html/mov_bbb.mp4" },
-  { id: 2, url: "https://filesamples.com/samples/video/mp4/sample_640x360.mp4" },
-];
+    { id: 1, url: "/reel.mp4" },
+    { id: 2, url: "https://filesamples.com/samples/video/mp4/sample_640x360.mp4" },
+  ];
 
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef(null);
@@ -47,7 +47,8 @@ const Containt = () => {
       <div className="lower">
 
         <div className="para">
-          <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit tempora eius suscipit aliquid aut deleniti excepturi, eligendi dolor sapiente quas!</p>
+          <p id="para">Welcome to our professional Celebrity & Influencer Management platform.
+            We help brands connect with top celebrities and digital influencers to create powerful campaigns that leave a lasting impact.</p>
           <Link to="/form" className="button">
             <p>Get Started</p>
           </Link>
@@ -71,8 +72,8 @@ const Containt = () => {
                 />
               </div>
             ))}
-             
-             <button className="nav-button left" onClick={() => handleManual('prev')}>❮</button>
+
+            <button className="nav-button left" onClick={() => handleManual('prev')}>❮</button>
             <button className="nav-button right" onClick={() => handleManual('next')}>❯</button>
           </div>
         </div>

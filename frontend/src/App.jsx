@@ -10,6 +10,7 @@ import About from './components/about';
 import Actors from "./components/section/actor"
 import Oneperson from './components/section/oneperson';
 import Form from "./components/form"
+import Register from './components/register';
 
 const Home = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/makeupartists" element={<Actors obj={"makeupartist"} />} />
         <Route path="/:type/:name" element={<Oneperson />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </BrowserRouter>

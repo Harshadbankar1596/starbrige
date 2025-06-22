@@ -13,9 +13,7 @@ const Nav = () => {
         </div>
         
         <div className="right">
-          <div className="login">
-            <button className="btn">Login</button>
-          </div>
+          
           <div className="menu" onClick={() => setOpenMenu(true)}>☰</div>
         </div>
 
@@ -29,10 +27,13 @@ const Nav = () => {
         <button className="close-btn" onClick={() => setOpenMenu(false)}>×</button>
         <Link to="/" onClick={() => setOpenMenu(false)}>Home</Link>
         <Link to="/about" onClick={() => setOpenMenu(false)}>About</Link>
-        <Link to="/contact" onClick={() => setOpenMenu(false)}>Contact</Link>
         <Link to="/actors" onClick={() => setOpenMenu(false)}>Actors</Link>
         <Link to="/anchors" onClick={() => setOpenMenu(false)}>Anchors</Link>
         <Link to="/influencers" onClick={() => setOpenMenu(false)}>Influencers</Link>
+        <Link to="/writers" onClick={() => setOpenMenu(false)}>writers</Link>
+        <Link to="/reelshoots" onClick={() => setOpenMenu(false)}>reelshoots</Link>
+        <Link to="/mehandiartists" onClick={() => setOpenMenu(false)}>mehandiartists</Link>
+        <Link to="/makeupartists" onClick={() => setOpenMenu(false)}>makeupartists</Link>
       </div>
     </>
   );

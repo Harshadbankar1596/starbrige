@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './form.css';
 
@@ -9,7 +9,9 @@ const Form = () => {
   const [formData, setFormData] = useState({
     yourname: '',
     city: '',
-    phone: ''
+    phone: '',
+    date: '',
+    manualTalentName: '', // for manual entry if talentName is missing
   });
 
   const handleChange = (e) => {
@@ -18,17 +20,18 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const { yourname, city, phone } = formData;
+    const { yourname, city, phone, date, manualTalentName } = formData;
+    const actualTalentName = talentName || manualTalentName || 'N/A';
 
     const message = `Celebrity Booking Request 📩
-%0A Talent name : ${talentName || "N/A"}
-%0A Category : ${type || "N/A"}
+%0A Talent name : ${actualTalentName}
+%0A Category : ${type || 'N/A'}
 %0A Name : ${yourname}
 %0A City : ${city}
-%0A Phone : ${phone}`;
+%0A Phone : ${phone}
+%0A Booking Date : ${date || 'Not provided'}`;
 
-    const whatsappNumber = '7028445707';
+    const whatsappNumber = '919404823867';
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
     window.open(whatsappURL, '_blank');
   };
@@ -36,51 +39,76 @@ const Form = () => {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="form-box">
-        <h2>Book Talent</h2>
+        <h2 className="form-title">📅 Book Talent</h2>
 
         <input
           type="text"
           name="yourname"
-          placeholder="Enter your full name"
+          placeholder="Your Full Name"
           required
           value={formData.yourname}
           onChange={handleChange}
+          className="form-input"
         />
+
+        {talentName ? (
+          <input
+            type="text"
+            value={talentName}
+            readOnly
+            className="form-input readonly"
+          />
+        ) : (
+          <input
+            type="text"
+            name="manualTalentName"
+            placeholder="Enter Celebrity Name"
+            required
+            value={formData.manualTalentName}
+            onChange={handleChange}
+            className="form-input"
+          />
+        )}
 
         <input
           type="text"
-          placeholder="celebrity name"
-          value={talentName || ''}
-          readOnly
-        />
-
-        <input
-          type="text"
-          placeholder="celebrity Category"
           value={type || ''}
           readOnly
+          className="form-input readonly"
         />
 
         <input
           type="text"
           name="city"
-          placeholder="Enter your city"
+          placeholder="Your City"
           required
           value={formData.city}
           onChange={handleChange}
+          className="form-input"
         />
 
         <input
           type="tel"
           name="phone"
-          placeholder="Enter your phone number"
+          placeholder="Phone Number"
           required
           pattern="[0-9]{10}"
           value={formData.phone}
           onChange={handleChange}
+          className="form-input"
         />
 
-        <button type="submit" className="animated-btn">Submit</button>
+        <label className="form-label">Booking Date:</label>
+        <input
+          type="date"
+          name="date"
+          required
+          value={formData.date}
+          onChange={handleChange}
+          className="form-input"
+        />
+
+        <button type="submit" className="form-button">Submit</button>
       </form>
     </div>
   );

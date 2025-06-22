@@ -250,6 +250,56 @@
   color: var(--gold);      /* text color set karne ke liye */
 }
 
+.join-section {
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--black); /* Dark base */
+  border: 1px solid var(--metal-gold);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); /* soft gold glow */
+  max-width: 900px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.join-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--metal-gold);
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.4); /* gold glow */
+}
+
+.join-section p {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+  margin-bottom: 2rem;
+}
+
+.join-button {
+  display: inline-block;
+  background: var(--metal-gold);
+  color: var(--black);
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  transition: all 0.3s ease;
+}
+
+.join-button:hover {
+  background: transparent;
+  color: var(--metal-gold);
+  border: 2px solid var(--metal-gold);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+
 
 /* -------------------
    ✅ Responsive Design

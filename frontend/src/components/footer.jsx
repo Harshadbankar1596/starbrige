@@ -1,9 +1,17 @@
 import React from 'react';
 import './footer.css';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 const Footer = () => {
   return (
     <footer className="footer-container">
+      
+      {/* ✅ Join CTA Top Section */}
+      <div className="footer-join-top">
+        <h3>Want to join as a celebrity, influencer, or anchor?</h3>
+        <Link to="/register" className="footer-join-button">Register Now</Link>
+      </div>
+
       <div className="footer-wrapper">
         <div className="footer-left">
           <h2 className="footer-heading">Get Started Today</h2>

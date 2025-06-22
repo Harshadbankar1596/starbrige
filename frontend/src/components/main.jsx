@@ -1,6 +1,7 @@
 import React from 'react';
 import './main.css';
 import Servis from "../components/servis";
+import { Link } from 'react-router-dom';
 
 const MainContent = () => {
   return (
@@ -34,7 +35,13 @@ const MainContent = () => {
         </div>
       </section>
 
-    <Servis />
+      <Servis />
+   {/* join sectio */}
+      <section className="join-section">
+        <h2>Do you want to join us as an actor, influencer, anchor?</h2>
+        <p>Register yourself and become a part of our professional talent network.</p>
+        <Link to="/register" className="join-button">Register Now</Link>
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="choose-section">
