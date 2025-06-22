@@ -101,7 +101,7 @@
   </style>
 </head>
 
-<body>
+<body style="display: none;">
 
   <h2>Talent Management Dashboard</h2>
 
@@ -187,22 +187,29 @@
   </form>
 
   <script>
+  const password = prompt("Enter password to access this dashboard:");
+if (password === "6.9.15") {
+  document.body.style.display = "block";
+} else {
+  document.body.innerHTML = "<h1 style='color: red; text-align: center;'>Access Denied</h1>";
+}
+
+
     document.addEventListener('contextmenu', event => event.preventDefault()); // Disable right-click
     document.addEventListener("keydown", function (e) {
-    // F12
-    if (e.key === "F12") {
-      e.preventDefault();
-    }
-
-    // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S
-    if (
-      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
-      (e.ctrlKey && e.key.toLowerCase() === "u") ||  // Ctrl+U
-      (e.ctrlKey && e.key.toLowerCase() === "s")     // Optional: Ctrl+S
-    ) {
-      e.preventDefault();
-    }
-  });
+      // F12
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S
+      if (
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && e.key.toLowerCase() === "u") ||  // Ctrl+U
+        (e.ctrlKey && e.key.toLowerCase() === "s")     // Optional: Ctrl+S
+      ) {
+        e.preventDefault();
+      }
+    });
     const categories = [
       "actor",
       "anchor",
@@ -234,6 +241,10 @@
     }
 
     populateDropdowns();
+
+
+
+
   </script>
 </body>
 
