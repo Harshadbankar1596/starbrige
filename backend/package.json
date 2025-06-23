@@ -8,9 +8,9 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Harshad Bankar",
   "license": "ISC",
-  "description": "",
+  "description": "StarbtigIndia Backend Server",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
