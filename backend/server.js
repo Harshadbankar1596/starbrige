@@ -73,7 +73,7 @@ app.post("/api", (req, res) => {
 
 
 // ✅ PUT update user
-app.put("/api/update", (req, res) => {
+app.post("/api/update", (req, res) => {
   const { category, name, ...updates } = req.body;
 
   if (!category || !name) {
