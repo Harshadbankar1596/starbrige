@@ -5,7 +5,8 @@ import './containt.css';
 
 
 const Containt = () => {
-  const videos = [
+  let videos = useRef(null);
+  videos.current = [
     { id: 1, url: "/reel.mp4" },
     { id: 2, url: "https://filesamples.com/samples/video/mp4/sample_640x360.mp4" },
   ];
@@ -14,11 +15,11 @@ const Containt = () => {
   const intervalRef = useRef(null);
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % videos.length);
+    setCurrent((prev) => (prev + 1) % videos.current.length);
   };
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + videos.length) % videos.length);
+    setCurrent((prev) => (prev - 1 + videos.current.length) % videos.current.length);
   };
 
   const handleManual = (direction) => {
@@ -56,7 +57,7 @@ const Containt = () => {
 
         <div className="video-slider-section">
           <div className="video-slider">
-            {videos.map((video, index) => (
+            {videos.current.map((video, index) => (
               <div
                 key={video.id}
                 className={`video-slide ${index === current ? 'active' : ''}`}
