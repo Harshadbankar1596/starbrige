@@ -1,6 +1,35 @@
 {
-  "actor": [],
-  "anchor": [],
+  "actor": [
+    {
+      "name": "Aishwarya Jadhav",
+      "followers": "350k",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST-FgwJpgZ2HnvvtFK7IzhD7tW5DVd8-16KQ&s",
+      "profession": "Actor",
+      "experience": "5 years of stage",
+      "languages": "Marathi | Hindi",
+      "specialization": "Dancer | Lavni | Actor"
+    }
+  ],
+  "anchor": [
+    {
+      "name": "Namrata Shirsath",
+      "followers": "10.6k",
+      "img": "https://i.ibb.co/zhW4tCsN/namratashirsath.jpg",
+      "profession": "Anchor | Emcee | Presenter",
+      "experience": "5 years of stage and event hosting",
+      "languages": "English | Marathi | Hindi",
+      "specialization": "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows"
+    },
+    {
+      "name": "Pooja Khambalkar",
+      "followers": "50.5k",
+      "img": "https://i.ibb.co/gZ16z4rz/Pooja-Khambalkar.jpg",
+      "profession": "Anchor | Emcee | Presenter",
+      "experience": "5 years of stage and event hosting",
+      "languages": "English | Marathi | Hindi",
+      "specialization": "Cultural events, Corporate shows, Weddings, Social awareness programs, School & College functions, Live shows"
+    }
+  ],
   "influencer": [
     {
       "name": "Rushikesh gadekar",
@@ -12,7 +41,17 @@
       "specialization": "influencer"
     }
   ],
-  "writer": [],
+  "writer": [
+    {
+      "name": "Rushikesh Aher",
+      "followers": "",
+      "img": "https://i.ibb.co/2JCKXBQ/Whats-App-Image-2025-06-19-at-21-32-42-c9a3508a.jpg",
+      "profession": "Ghostwriting  Translation Services  Content Writing for books, websites, and more. Content Writing For digital Platforms",
+      "experience": "3 year Translation Services  Content Writing for books",
+      "languages": "English | Marathi | Hindi",
+      "specialization": "Content Writing For digital Platforms"
+    }
+  ],
   "reelshoot": [],
   "mehendiartist": [],
   "makeupartist": []
