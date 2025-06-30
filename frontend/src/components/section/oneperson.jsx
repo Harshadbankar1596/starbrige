@@ -18,7 +18,7 @@ const Oneperson = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  }, []);
+  }, [person]);
 
   // Fetch person data
   useEffect(() => {
